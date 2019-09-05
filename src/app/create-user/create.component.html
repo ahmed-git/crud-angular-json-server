@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <form [formGroup] = "userForm">
+        <div class="form-group">
+          <label for="firstname">First name</label>
+          <input type="text" class="form-control" id="firstname" aria-describedby="firstname" 
+          formControlName="firstName" placeholder="Enter your first name" [ngClass]="{ 'is-invalid': userForm.controls.firstName.errors && ( submitted || userForm.controls.firstName.touched) }">
+          <div *ngIf="userForm.hasError('required','firstName')" class="invalid-feedback">
+            firstname is required.
+          </div>
+          <div *ngIf="userForm.hasError('minlength','firstName')" class="invalid-feedback">
+            minimum length 5 chars.
+          </div>
+           
+        
+        </div>
+        <div class="form-group">
+          <label for="lastname">Last name</label>
+          <input type="text" class="form-control" id="lastname" aria-describedby="lastname" 
+          formControlName="lastName" placeholder="Enter your last name" [ngClass]="{ 'is-invalid': userForm.controls.lastName.errors && ( submitted || userForm.controls.lastName.touched)  }">
+          <div *ngIf="userForm.hasError('required','lastName')" class="invalid-feedback">
+            lastname is required.
+          </div>
+          <div *ngIf="userForm.hasError('minlength', 'lastname')" class="invalid-feedback">
+              minimum length 8 chars.
+            </div>
+        </div>
+      </form> 
+      <button type="submit" class="btn btn-primary" (click)="addUser()">Submit</button>
+
+     
+    </div>
+  </div>
+</div>

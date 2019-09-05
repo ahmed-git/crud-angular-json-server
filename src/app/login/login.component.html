@@ -1,0 +1,39 @@
+<div class="container login-container">
+  <div class="row">
+    <div class="col-md-6 login-form mx-auto">
+      <h3>Login</h3>
+      <form [formGroup]="form">
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="email" placeholder="Your Email *"
+          [ngClass]="{'is-invalid': form.controls.email.errors && (submitted || form.controls.email.touched)}"/>
+          <div *ngIf="form.hasError('required','email')" class="invalid-feedback">
+              Email is required.
+          </div>
+          <div *ngIf="form.hasError('email','email')" class="invalid-feedback">
+              Email format is incorrect.
+          </div>
+          <div *ngIf="form.hasError('incorrect','email')" class="invalid-feedback">
+            {{errorLogin}}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="password" class="form-control" formControlName="password" placeholder="Your Password *"
+          [ngClass]="{'is-invalid': form.controls.password.errors && (submitted || form.controls.password.touched)}"/>
+          <div *ngIf="form.hasError('required','password')" class="invalid-feedback">
+              Password is required.
+          </div>
+          <div *ngIf="form.hasError('minlength','password')" class="invalid-feedback">
+              Password should contain at least 8 characters.
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btnSubmit" (click)="signIn()">Login</button>
+        </div>
+        <div class="form-group">
+          <p> Don't have an account? <a routerLink="/register" class="register">register here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

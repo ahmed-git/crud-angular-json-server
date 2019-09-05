@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-6">
+      <input type="text" class="form-control" placeholder="Filter by name" [(ngModel)]="filterInput">
+      <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First name</th>
+              <th scope="col">Last name</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users | filterList : filterInput; let i=index">
+              <th scope="row">{{ i }}</th>
+              <td>{{ user.firstName }}</td>
+              <td>{{ user.lastName }}</td>
+              <td> <button class="btn" (click)="deleteUser(user.id)"><img src="../../assets/images/baseline-remove_circle-24px.svg" alt="remove" class="img-fluid"></button> </td>
+              <td> <button class="btn" [routerLink]="['../user', user.id]"><img src="../../assets/images/baseline-check_circle-24px.svg" alt="open" class="img-fluid"></button> </td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div>
