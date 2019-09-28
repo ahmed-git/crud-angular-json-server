@@ -16,13 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAyiedxXetEK_HbFU4N_pJTlS2re2rJuZs ",
-  authDomain: "fir-project-f2b73.firebaseapp.com",
-  databaseURL: "https://fir-project-f2b73.firebaseio.com",
-  projectId: "fir-project-f2b73",
-  storageBucket: "fir-project-f2b73.appspot.com",
-  messagingSenderId: "866374409192",
-  appID: "1:866374409192:web:490ea84396c71ad1",
+  
 };
 
 @NgModule({
