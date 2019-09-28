@@ -2,6 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 Please refer to <a href="https://github.com/typicode/json-server">json server<a> to understand how it works.
+You should also create a firabase project and add the configuration in app.module.ts file.
 
 ## Development server
 
