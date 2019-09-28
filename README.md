@@ -1,10 +1,11 @@
 # Crud
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+Please refer to <a href="https://github.com/typicode/json-server">json server<a> to understand how it works.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. Don't forget to run json server too.
 
 ## Code scaffolding
 
